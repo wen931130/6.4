@@ -79,7 +79,7 @@ function drawSkeleton () {
   if (partB.score > 0.1) {
     push();
     textSize(40);
-    7text("412730748 陳玟慈", partA.x, partA.y - 50);
+    text("412730748 陳玟慈", partA.x-width,partA.y-100);
     pop();
   }
   if (partC.score > 0.1) {
@@ -111,6 +111,4 @@ function drawSkeleton () {
   15 left foot
   16 right foot
 */
- 留言
- 建議修訂
- 編輯此處
+
