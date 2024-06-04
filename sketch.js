@@ -58,29 +58,6 @@ function draw() {
   image(cam, 0, 0);
 
 }
-
-
-// function drawSkeleton() {
-//   for (let i = 0; i < poses.length; i++) {
-//     let pose = poses[i];
-//     let partA = pose.keypoints[3];
-//     let partB  = pose.keypoints[4];
-    
-
-//     if (leftEar.score > 0.1) {
-//       push();
-//       textSize(40);
-//       text("412730748 陳玟慈", 10, 40);
-//       pop();
-//     }
-    
-//     if (leftEar.score > 0.1 && rightEar.score > 0.1) {
-//       let distance = 100; // Adjust this value to increase or decrease the separation
-//       image(dinosaurImg, leftEar.x - distance-100, leftEar.y - 50, 50, 50);
-//       image(dinosaurImg, rightEar.x + distance+75, rightEar.y -25, 50, 50);
-//     }
-//   }
-// }
 function drawSkeleton () {
   // Draw all the tracked landmark points
   for (let i = 0; i < poses. length; i++) {
