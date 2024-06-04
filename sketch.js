@@ -52,7 +52,7 @@ function draw() {
   image(video, 0, 0);
   drawSkeleton();
   // flip horizontal
-  cam = get();
+  let cam = get();
   translate(cam.width, 0);
   scale(1, -1);  //反向
   image(cam, 0, 0);
@@ -67,23 +67,26 @@ function drawSkeleton () {
   partB = pose. keypoints [4];
   partC = pose. keypoints [9];
   partD = pose. keypoints [10];
+  let speed = 2; 
+    let posX = (frameCount * speed) % width;
+    let negPosX = width - ((frameCount * speed) % width);
   //line(partA.x, partA.y, partB.x, partB.y);
   if (partA. score > 0.1) {
-  image(dinosaurImg, partA.x, partA.y-25,50,50)
+  image(dinosaurImg,posX, partA. y-25,50,50)
   }
   if (partB.score > 0.1) {
-  image (dinosaurImg, partB.x, partB. y-25,50,50) 
+  image (dinosaurImg, posX, partB. y-25,50,50) 
   if (partB.score > 0.1) {
     push();
     textSize(40);
     text("412730748 陳玟慈", 10,40);
     pop();
   }
-  if (partA.score > 0.1) {
+  if (partC.score > 0.1) {
   image(dinosaurImg, partC.x, partC.y, 50, 50);
   }
   // Draw the GIF at the right wrist if the score is hi
-  if (partB. score > 0.1) {
+  if (partD. score > 0.1) {
   image (dinosaurImg, partD.x, partD.y, 50, 50);
 }
   }
@@ -108,3 +111,6 @@ function drawSkeleton () {
   15 left foot
   16 right foot
 */
+ 留言
+ 建議修訂
+ 編輯此處
